@@ -1,0 +1,44 @@
+[
+    {
+        "model": "store.product",
+        "pk": 1,
+        "fields": {
+            "name": "Apple",
+            "slug": "apple",
+            "category": 1,
+            "MRP": 100,
+            "SellingPrice": 80,
+            "stock": 50,
+            "store": 17,
+            "description": "Description for product 1"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 2,
+        "fields": {
+            "name": "orange",
+            "slug": "orange",
+            "category": 2,
+            "MRP": 200,
+            "SellingPrice": 160,
+            "stock": 100,
+            "store": 17,
+            "description": "Description for product 2"
+        }
+    },
+    {
+        "model": "store.product",
+        "pk": 3,
+        "fields": {
+            "name": "mango",
+            "slug": "mango",
+            "category": 1,
+            "MRP": 150,
+            "SellingPrice": 120,
+            "stock": 75,
+            "store": 17,
+            "description": "Description for product 3"
+        }
+    }
+]

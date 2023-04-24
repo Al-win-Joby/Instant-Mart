@@ -1,0 +1,95 @@
+[
+    {
+      "model": "users.user",
+      "pk": 15,
+      "fields": {
+        "name": "Admin1",
+        "email": "admin1@gmail.com",
+        "phone": 1234567890,
+        "password": "123",
+        
+        "is_user": false,
+        "is_admin": true,
+        "is_store": false,
+        "location": "POINT(9.908864509607955 76.3622789211426)" 
+      }
+    },
+    {
+      "model": "users.admin",
+      "pk": 15,
+      "fields": {
+        "user": 15
+      }
+    },      
+    {
+      "model": "users.user",
+      "pk": 16,
+      "fields": {
+        "name": "user16",
+        "email": "user16@gmail.com",
+        "phone": 1234567890,
+        "password": "123",        
+        "is_user": false,
+        "is_admin": true,
+        "is_store": false,
+        "location": "POINT(9.939736944796254 76.32148940903029)" 
+      }
+    },
+
+    {
+      "model": "users.user",
+      "pk": 17,
+      "fields": {
+        "name": "store1",
+        "email": "store1@gmail.com",
+        "phone": 1234567890,
+        "password": "123",
+        
+        "is_user": false,
+        "is_admin": true,
+        "is_store": false,
+        "location": "POINT(9.936599414223297 76.31818156862174)" 
+      }
+    },
+    {
+      "model": "users.store",
+      "pk": 17,
+      "fields": {
+        "user": 17,
+        "store_name": "store1"
+      }
+    },
+
+
+    {
+      "model": "store.category",
+      "pk": 1,
+      "fields": {
+          "name": "Fruits 1",
+          "description": "Description for category 1",
+          "image": "Mam.jpg"
+      }
+  },
+  {
+      "model": "store.category",
+      "pk": 2,
+      "fields": {
+          "name": "Vegetable 1",
+          "description": "Description for category 2",
+          "image": "Mam.jpg"
+      }
+  },
+  {
+      "model": "store.category",
+      "pk": 3,
+      "fields": {
+          "name": "Groceries",
+          "description": "Description for category 3",
+          "image": "Mam.jpg"
+      }
+  }
+
+
+
+
+  ]
