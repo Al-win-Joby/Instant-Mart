@@ -1,5 +1,6 @@
 version: "3.8"
 services:
+
   app:
     build: .
     volumes:
@@ -8,7 +9,11 @@ services:
       - 8000:8000
     image: app:django
     container_name: django_container
-    command: python manage.py runserver 0.0.0.0:8000
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000" #python manage.py runserver 0.0.0.0:8000
+    environment:
+      - REDIS_HOST=redis
+    depends_on:
+      - redis
   db:
     image: postgres
     volumes:
@@ -18,5 +23,9 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     container_name: postgres_db
+  redis:
+    image: redis:latest
+    container_name: redis_container
+
 volumes:
   psql:

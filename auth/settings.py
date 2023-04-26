@@ -171,15 +171,16 @@ CHANNEL_LAYERS = {
         },
     },
 }
+REDIS_HOST = os.environ.get('REDIS_HOST', '127.0.0.1')
 CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",
-        "OPTIONS": {
-            "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        }
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://{0}:{1}/0'.format(REDIS_HOST, 6379),
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
     }
-}  
+}
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_ACCESS_KEY_ID=env("AWS_ACCESS_KEY")

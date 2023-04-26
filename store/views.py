@@ -238,7 +238,7 @@ class ShowSearchedProductAPI(generics.ListAPIView):
         if self.request.user.is_authenticated is False:
             if cache.get(products):
                 payload=cache.get(products)
-                print("caching")
+                print("caching")        
                 return payload
             else:
                 
